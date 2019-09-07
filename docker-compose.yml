@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  php-docker-xdebug:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: php-docker-xdebug
+    container_name: php-docker-xdebug
+    environment:
+      XDEBUG_CONFIG: remote_host=host.docker.internal remote_port=9000 remote_enable=1
+    ports:
+      - '1880:80'
+    volumes:
+        - './src:/var/www/html'
