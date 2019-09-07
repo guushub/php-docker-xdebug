@@ -61,3 +61,5 @@ Open a terminal in the same folder as the Dockerfile and run
 ```bash
 docker-compose up
 ```
+
+And after that, browse to localhost:1880 (in our example)
